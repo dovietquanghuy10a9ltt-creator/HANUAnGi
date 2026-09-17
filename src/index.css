@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Be Vietnam Pro', sans-serif;
+
+  --color-hanu-deep:   #0E0202;
+  --color-hanu-dark:   #1E0505;
+  --color-hanu-red:    #7B1D1D;
+  --color-hanu-mid:    #9B2D2D;
+  --color-hanu-bright: #C23A3A;
+  --color-hanu-gold:   #D4A017;
+  --color-hanu-gold-bright: #F0C040;
+  --color-hanu-cream:  #FFF5EE;
+  --color-hanu-muted:  #C49090;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #0E0202;
+  color: #FFFFFF;
+  scroll-behavior: smooth;
+}
+
+body { margin: 0; padding: 0; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(212,160,23,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(212,160,23,0.6); }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(240,192,64,0.3); }
+  50%       { box-shadow: 0 0 60px rgba(240,192,64,0.8), 0 0 100px rgba(240,192,64,0.4); }
+}
+
+@keyframes float-in {
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes result-pop {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.08); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes confetti-fall {
+  0%   { transform: translateY(-10px) rotate(0deg);   opacity: 1; }
+  100% { transform: translateY(80px)  rotate(360deg); opacity: 0; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #D4A017 0%, #fff 50%, #D4A017 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s linear infinite;
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,160,23,0.25);
+}

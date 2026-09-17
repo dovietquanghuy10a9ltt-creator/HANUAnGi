@@ -1,0 +1,10 @@
+{
+  "description": "Discover nearby restaurants based on your selected dishes, featuring Google Maps integration and a fun gacha animation for random meal suggestions.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
